@@ -8,7 +8,7 @@ The Tennis library is a Python package that provides functionalities for simulat
 
 <br>
 
-## **Table Of Contents**
+## [**Table Of Contents**](#table-of-contents)
 - [Tennis Library](#tennis-library)
   - [**Table Of Contents**](#table-of-contents)
   - [Features](#features)
