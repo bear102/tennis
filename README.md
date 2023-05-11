@@ -9,14 +9,32 @@ The Tennis library is a Python package that provides functionalities for simulat
 <br>
 
 ## **Table Of Contents**
-<details>
-<summary>Table of Contents</summary>
-<ul>
-{% for header in res.headers %}
-  <li><a href="#{{ header.id }}">{{ header.text }}</a></li>
-{% endfor %}
-</ul>
-</details>
+- [Tennis Library](#tennis-library)
+  - [**Table Of Contents**](#table-of-contents)
+  - [Features](#features)
+    - [1. Match Simulation](#1-match-simulation)
+    - [2. Tiebreaker](#2-tiebreaker)
+    - [Tracking Stats](#tracking-stats)
+  - [Usage](#usage)
+    - [Quick Start](#quick-start)
+    - [Match Methods](#match-methods)
+      - [tennis\_match (self, player1:str, player2:str, matchFormat:dict=None)](#tennis_match-self-player1str-player2str-matchformatdictnone)
+      - [backup\_match ()](#backup_match-)
+      - [load\_backup (self, backup\_data)](#load_backup-self-backup_data)
+      - [win\_point (self, player:str, how\_won=\[\])](#win_point-self-playerstr-how_won)
+      - [serve\_fault (self, player:str)](#serve_fault-self-playerstr)
+      - [win\_game (self, player:str)](#win_game-self-playerstr)
+      - [win\_set (self, player:str)](#win_set-self-playerstr)
+      - [get\_all\_info (self)](#get_all_info-self)
+      - [get\_scoreboard (self, player:str)](#get_scoreboard-self-playerstr)
+      - [match\_stats (self, player:str)](#match_stats-self-playerstr)
+    - [Tiebreak Methods](#tiebreak-methods)
+      - [match\_stats (self, player1:str, player2:str, matchFormat:tiebreak=None)](#match_stats-self-player1str-player2str-matchformattiebreaknone)
+      - [backup\_tiebreak ()](#backup_tiebreak-)
+      - [load\_backup (self, backup\_data)](#load_backup-self-backup_data-1)
+      - [win\_point (self, player:str, how\_won=\[\])](#win_point-self-playerstr-how_won-1)
+      - [tiebreak\_stats (self, player:str)](#tiebreak_stats-self-playerstr)
+      - [get\_scoreboard (self, player:str)](#get_scoreboard-self-playerstr-1)
 
 
 
@@ -226,7 +244,7 @@ NA - Second Serve Percentage - NA
 
 ### <h1>Match Methods</h1>
 
-#### ***TennisMatch (self, player1:str, player2:str, matchFormat:dict=None)***
+#### [tennis_match](#tennis_match) (self, player1:str, player2:str, matchFormat:dict=None)
 Creates a new instance of a tennis match.
 **Parameters**
 
@@ -247,10 +265,10 @@ match = TennisMatch("a", "b",{"num_games_to_win":2, "best_of_num_sets":3, "whos_
 
 <br>
 
-#### ***backup_match ()***
+#### [backup_match](#backup_match) ()
 Creates a backup for the current tennis match instance
 
-#### ***load_backup (self, backup_data)***
+#### [load_backup](#load_backup) (self, backup_data)
 Loads a backup into a new match
 
 **Parameters**
@@ -279,7 +297,7 @@ print(new_match.match_stats("a"))
 
 
 
-#### ***win_point (self, player:str, how_won=[])***
+#### [win_point](#win_point) (self, player:str, how_won=[])
 method that handles a player winning or loosing a point. Do not call this method if it is a double fault. Instead, call the [`serve_fault` (self, player:str)](#serve_fault-self-playerstr) method
 
 **Parameters**
@@ -306,7 +324,7 @@ match.win_point("b", ['win_by_volley','winner'])
 
 <br>
 
-#### ***serve_fault (self, player:str)***
+#### [serve_fault](#serve_fault) (self, player:str)
 method to call when a server misses a first or second serve
 
 **Parameters**
@@ -329,7 +347,7 @@ match.win_point("a")
 
 <br>
 
-#### ***win_game (self, player:str)***
+#### [win_game](#win_game) (self, player:str)
 A method that will win the game for a player. This method is intended for development and testing. The statistics for the match will be off.
 
 **Parameters**
@@ -347,7 +365,7 @@ match.win_game("a")
 
 <br>
 
-#### ***win_set (self, player:str)***
+#### [win_set](#win_set) (self, player:str)
 A method that will win the set for a player. This method is intended for development and testing. The statistics for the match will be off.
 
 **Parameters**
@@ -365,7 +383,7 @@ match.win_set("a")
 <br>
 
 
-#### ***get_all_info (self)***
+#### [get_all_info](#get_all_info) (self)
 A method that will return all the info about the match in a dictionary format
 
 ```python
@@ -383,7 +401,7 @@ return {"winner":self.winner, "game_history":self.gameHistory, "set_history": se
 
 <br>
 
-#### ***get_scoreboard (self, player:str)***
+#### [get_scoreboard](#get_scoreboard) (self, player:str)
 A method that will return a string representation of the current scoreboard.
 
 **Parameters**
@@ -408,7 +426,7 @@ A method that will return a string representation of the current scoreboard.
 
 <br>
 
-#### ***match_stats (self, player:str)***
+#### [match_stats](#match_stats) (self, player:str)
 A method that will return the statistics about the match in a string format
 
 **Parameters**
@@ -455,7 +473,7 @@ a vs b
 
 ### <h1>Tiebreak Methods</h1>
 
-#### ***tiebreak (self, player1:str, player2:str, matchFormat:dict=None)***
+#### [match_stats](#tiebreak) (self, player1:str, player2:str, matchFormat:tiebreak=None)
 Creates a new instance of a tiebreak.
 
 **Parameters**
@@ -474,7 +492,7 @@ match = tiebreak("a","b",{"first_to_num_points":7, "win_by":2, "whos_serve":"a"}
 
 <br>
 
-#### ***backup_tiebreak ()***
+#### [backup_tiebreak](#backup_tiebreak) ()
 A method to backup tiebreak data
 
 **Example**
@@ -483,7 +501,7 @@ match = tiebreak("a","b",{"first_to_num_points":7, "win_by":2, "whos_serve":"a"}
 backup_data = match.backup_tiebreak()
 ```
 
-#### ***load_backup (self, backup_data)***
+#### [load_backup](#load_backup) (self, backup_data)
 A method to load backup data from another tiebreak object
 
 **Parameters**
@@ -511,7 +529,7 @@ print(new_tiebreak.tiebreak_stats("a"))
 
 <br>
 
-#### ***win_point (self, player:str, how_won=[])***
+#### [win_point](#win_point) (self, player:str, how_won=[])
 method that handles a player winning or loosing a point. Do not call this method if it is a double fault. Instead, call the [`serve_fault` (self, player:str)](#serve_fault-self-playerstr) method
 **Parameters**
 - player (str): The name of the player who won the point.
@@ -537,7 +555,7 @@ match.win_point("b", ['win_by_volley','winner'])
 
 <br>
 
-#### ***tiebreak_stats (self, player:str)***
+#### [tiebreak_stats](#tiebreak_stats) (self, player:str)
 A method that returns a string representation of the statistics of the tiebreak
 
 **Parameters**
@@ -555,7 +573,7 @@ print(tb.tiebreak_stats("a"))
 
 <br>
 
-#### ***get_scoreboard (self, player:str)***
+#### [get_scoreboard](#get_scoreboard) (self, player:str)
 A method that returns a string representation of the current score
 
 **Parameters**
