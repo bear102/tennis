@@ -111,7 +111,7 @@ a.win_point("a", ["win_by_dropshot"])
 print(a.get_scoreboard("a"))
 
 # gets a string representation of the stats. Player "a" will be displayed on the left
-print(a.print_stats("a"))
+print(a.match_stats("a"))
 
 ```
 
