@@ -1,10 +1,18 @@
-# [Python Tennis Library](https://github.com/bear102/tennis/blob/main/img/my-PyTennis.png)
-[![PyPI](https://img.shields.io/pypi/v/tennis)](https://pypi.org/project/tennis/)
-[![GitHub](https://img.shields.io/badge/GitHub-bear102-%2312100E.svg?style=flat&logo=github)](https://github.com/bear102/tennis)
-![Python](https://img.shields.io/badge/python-3.7%20%7C%203.8%20%7C%203.9-blue)
-[![License](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
+<p align="center">
+  <img src="https://github.com/bear102/tennis/blob/main/img/my-PyTennis.png" alt="Python Tennis Library">
+</p>
 
-The Tennis library is a Python package that provides functionalities for simulating tennis matches and tiebreakers. It offers easy-to-use methods to simulate and track scores, tiebreakers, and various statistics. The tennis library is perfect for tracking real time data input.
+<p align="center">
+  <a href="https://pypi.org/project/tennis/"><img src="https://img.shields.io/pypi/v/tennis" alt="PyPI"></a>
+  <a href="https://github.com/bear102/tennis"><img src="https://img.shields.io/badge/GitHub-bear102-%2312100E.svg?style=flat&logo=github" alt="GitHub"></a>
+  <img src="https://img.shields.io/badge/python-3.7%20%7C%203.8%20%7C%203.9-blue" alt="Python">
+  <a href="https://opensource.org/licenses/MIT"><img src="https://img.shields.io/badge/License-MIT-blue.svg" alt="License"></a>
+</p>
+
+<p align="center">
+  The Tennis library is a Python package that provides functionalities for simulating tennis matches and tiebreakers. It offers easy-to-use methods to simulate and track scores, tiebreakers, and various statistics. The tennis library is perfect for tracking real-time data input.
+</p>
+
 
 <br>
 
