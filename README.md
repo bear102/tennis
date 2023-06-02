@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://github.com/bear102/tennis/blob/main/img/pytennis.png" alt="Python Tennis Library" width="500">
+  <img src="https://github.com/bear102/tennis/blob/main/img/pytennis.png" alt="Python Tennis Library" width="300">
 </p>
 
 <p align="center">
